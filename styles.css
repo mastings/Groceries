@@ -1,0 +1,72 @@
+/* Navigation Bar */
+.nav {
+	padding: 10px;
+	text-align: center;
+}
+
+	.nav img {
+		max-width: 100%;
+		height: auto;
+		width: auto;
+		max-height: 100%;
+	}
+
+
+/* Body */
+body {
+	font-family: 'Lato', sans-serif;
+	min-height: 400px;
+	margin-bottom: 60px;
+	clear: both;
+	height: 100%;
+	/*overflow-y: hidden ! important;
+	overflow-x: hidden ! important;
+	*/
+	overflow: scroll;
+	background-image: url("http://www.entwistlecommunitychurch.com/wp-content/uploads/2016/09/bigstock-Blue-sky-background-with-a-tin-56684774.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	/* Background property */
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+/* Headers */
+/*h1 {
+	font-family: 'Source Serif Pro', serif;
+	text-align: left;
+	font-size: 40px;
+	margin-bottom: 20px;
+}*/
+
+h2 {
+	text-align: center;
+}
+
+/* Line */
+hr {
+	width: 85%;
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+
+/* Submit form */
+form {
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 30px;
+}
+
+input {
+	margin-top: 15px;
+}
+
+#PokemonResults {
+	text-align: center;
+	vertical-align: middle;
+	padding: 20px 60px;
+
+}
