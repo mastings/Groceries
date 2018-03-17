@@ -1,0 +1,98 @@
+/*@font-face {
+	font-family: 'Berkshire Swash', cursive;
+	src: url(https://fonts.google.com/);
+	font-weight: 400;
+} */
+
+html { 
+  background: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/dTGsD6G/defocused-blurred-background-supermarket-interior-with-buyers-with-trolley_rlb_sgbb__F0000.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 16px;
+    padding: 20px 100px 0px 100px;
+    //background-image: url(http://www.photos-public-domain.com/wp-content/uploads/2011/04/natural-tan-canvas-fabric-texture.jpg);
+    //background-image: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/dTGsD6G/defocused-blurred-background-supermarket-interior-with-buyers-with-trolley_rlb_sgbb__F0000.png);
+    //background-image: url(https://angeliquepanagos.com/wp-content/uploads/2016/01/Superma.jpg);
+    //background-size: contain;
+    //background-repeat: no-repeat;
+    //background-position: center center;
+    //background: #f5fafa;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+}
+/* List */
+
+ul {
+    list-style: none;
+}
+
+li {
+    background: #f5fafa;
+    width: 500px;
+    min-height: 30px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+}
+
+.delete {
+    display: none;
+    margin-left: auto;
+}
+
+li:hover .delete {
+    display: block;
+}
+
+label {
+    width: 400px;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+/* Form */
+
+input[type=checkbox] {
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+
+input[type=text] {
+    font-size: 1em;
+    background: #f5fafa;
+}
+
+input[type=number] {
+    width: 90px;
+    background: #f5fafa;
+}
+
+button {
+    font-family: 'Arvo';
+    font-size: 1em;
+}
+
+/* Controls */
+
+.controls {
+    margin-top: 20px;
+}
