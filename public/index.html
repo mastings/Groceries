@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  	<link rel="icon" href="http://image.flaticon.com/icons/png/512/184/184540.png">
+  	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300|Source+Serif+Pro:600" rel="stylesheet"> 
+    <link rel="stylesheet" href="/styles.css"/>
+    <title>Grocery List</title>
+  	<style>
+		  body {
+			  font-family: 'Berkshire Swash', cursive;
+		  }
+  	</style>
+  </head>
+  <body>
+  	<FONT FACE="Berkshire Swash">
+	  	<div id="li">
+	  		<div id="app">
+	  			<h1>Grocery List!</h1>
+
+	  			<p>Identify what type of food your item is: 1 for not frozen & 2 for frozen</p>
+	  			<p>Frozen (type 2) items should be purchased last</p>
+	  			<form v-on:submit.prevent="addItem">
+	  				<input type="text" v-model="text">
+	  				<input type="number" v-model="priority" min="1" max="2" placeholder="frozen or not">
+	  				<button type="submit">Add</button>
+	  			</form>
+	  			<div class="controls">
+	  				<button v-on:click="showAll()">Show All</button>
+	  				<button v-on:click="showActive()">Show Yet-to-be Purchased</button>
+	  				<button v-on:click="showCompleted()">Show Purchased</button>
+	  				<button v-on:click="deleteCompleted()">Delete Purchased</button>
+	  				<button v-on:click="sortPriority()">Sort Type</button>
+	  			</div>
+	  			<ul>
+	  				<li v-for="item in filteredItems" draggable="true" v-on:dragstart="dragItem(item)" v-on:dragover.prevent v-on:drop="dropItem(item)">
+	  					<input type="checkbox" v-model="item.completed" v-on:click="completeItem(item)" /><label v-bind:class="{ completed: item.completed }">{{ item.text }} | {{ item.priority }}</label><button v-on:click="upPriority(item)" class="delete">&uarr;</button><button v-on:click="downPriority(item)" class="delete">&darr;</button><button v-on:click="deleteItem(item)" class="delete">X</button>
+	  				</li>
+	  			</ul>
+	  			<p v-show="activeItems.length === 0">&#9745; You got everything on your list!</p>
+	  		</div>
+	  		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+	  		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js" integrity="sha256-pU9euBaEcVl8Gtg+FRYCtin2vKLN8sx5/4npZDmY2VA=" crossorigin="anonymous"></script>
+	  		<script src="/script.js"></script>
+	  		<footer>
+	  			<!--Github footer-->
+	  			<p style="position: fixed; bottom: 0; width:100%; text-align: center">
+	  				<a href="https://github.com/mastings/Groceries" style="text-decoration:none">
+	  					Github
+	  				</a>
+	  			</p>
+	  		</footer>
+	  	</div>
+</FONT>
+</body>
+</html>
