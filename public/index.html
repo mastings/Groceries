@@ -17,10 +17,12 @@
   	<FONT FACE="Berkshire Swash">
 	  	<div id="li">
 	  		<div id="app">
+				<div class="container">
 	  			<h1>Grocery List!</h1>
 
 	  			<p>Identify what type of food your item is: 1 for not frozen & 2 for frozen</p>
 	  			<p>Frozen (type 2) items should be purchased last</p>
+				</div>
 	  			<form v-on:submit.prevent="addItem">
 	  				<input type="text" v-model="text">
 	  				<input type="number" v-model="priority" min="1" max="2" placeholder="frozen or not">
@@ -38,7 +40,9 @@
 	  					<input type="checkbox" v-model="item.completed" v-on:click="completeItem(item)" /><label v-bind:class="{ completed: item.completed }">{{ item.text }} | {{ item.priority }}</label><button v-on:click="upPriority(item)" class="delete">&uarr;</button><button v-on:click="downPriority(item)" class="delete">&darr;</button><button v-on:click="deleteItem(item)" class="delete">X</button>
 	  				</li>
 	  			</ul>
+				<div class="container">
 	  			<p v-show="activeItems.length === 0">&#9745; You got everything on your list!</p>
+				</div>
 	  		</div>
 	  		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
 	  		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js" integrity="sha256-pU9euBaEcVl8Gtg+FRYCtin2vKLN8sx5/4npZDmY2VA=" crossorigin="anonymous"></script>
